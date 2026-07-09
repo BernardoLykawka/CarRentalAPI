@@ -48,7 +48,7 @@ public class RentCarUseCaseImplTest {
         LocalDateTime expectedReturn = pickup.plusDays(5);
 
         Car car = new Car(carId, "Toyota", "Corolla", Category.SEDAN, CarClass.ECONOMY, "ABC-1234", 2024, "Silver", BigDecimal.valueOf(100.0), true);
-        Customer customer = new Customer(customerId, "John Doe", new Email("john@test.com"), "pass", new Cpf("12345678900"), new PhoneNumber("11999999999"), "12345", LocalDate.of(1990, 1, 1), "USER");
+        Customer customer = new Customer(customerId, "John Doe", new Email("john@test.com"), "pass", new Cpf("03519450089"), new PhoneNumber("11999999999"), "12345", LocalDate.of(1990, 1, 1), "USER");
         Rental rentalRequest = new Rental(null, carId, customerId, pickup, expectedReturn, null, null, null);
         Rental expectedSavedRental = new Rental(1L, carId, customerId, pickup, expectedReturn, null, BigDecimal.valueOf(500.0), RentalStatus.OPEN);
 

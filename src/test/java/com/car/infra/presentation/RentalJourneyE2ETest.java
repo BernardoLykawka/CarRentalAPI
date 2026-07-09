@@ -193,7 +193,7 @@ class RentalJourneyE2ETest {
                 .andExpect(status().isForbidden());
     }
 
-    @Test
+    @Test 
     @DisplayName("Autorização por papel: usuário comum não cadastra carro (403)")
     void normalUserCannotCreateCar() throws Exception {
         mockMvc.perform(post("/user/register")
